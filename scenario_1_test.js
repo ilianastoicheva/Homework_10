@@ -3,27 +3,10 @@ const TEST_DIR_SRC          = `${__dirname}\\id45eres4774561w`;
 const EXPECTED_FILE_LENGTH  = 5;
 let isTestPass              = true;
 
-// 1. Влизаме в папка scenario-1
-// 2. Откриваме всички файлове, които са поместени в нея
-// __dirname - дава ми пътя до текущия файл - но само файла който изпълнявам в момента
 
 const scenior1FileList = fs.readdirSync(TEST_DIR_SRC);
 console.log(scenior1FileList);
-// 3. Верифицираме наличието им и техните имена
 
-// цикъл с условие - пред условие
-//  ползваме когато, условието ни е генерално дефинирано
-// ** 
-// let index = 0;
-// while(index < scenior1FileList.length) {
-//     console.log(scenior1FileList[index]);
-//     index = index + 1;
-// }
-
-// FOR - цикъл - модифицирана версия на WHILE за масиви
-// for(let index = 0; index < scenior1FileList.length; index = index + 1 ) {
-//     console.log(scenior1FileList[index]);
-// }
 
 if(scenior1FileList.length != EXPECTED_FILE_LENGTH) {
     isTestPass = false;
@@ -42,10 +25,6 @@ assertIsTrue(true, isTestPass, 'Assert all files exists');
 
 function isFileNameInTheList(fileName) {
 
-    // const referenceFileName = ['main', 'capacity', 'traffic', 'click', 'volume'];
-    // return referenceFileName.includes(fileName);
-
-    // return ['main', 'capacity', 'traffic', 'click', 'volume'].includes(fileName);
 
     if(fileName == 'main'       ) return true;
     if(fileName == 'capacity'   ) return true;
