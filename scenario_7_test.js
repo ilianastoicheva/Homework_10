@@ -13,14 +13,12 @@ const volumeResult = readFileSync(fileNameVolume, 'utf-8');
 let isTestPass              = true;
 
 const ipAddress = "192.168.1.1";
-//console.log(personalId);
-//console.log(clickRate);
-//console.log(ipAddress);
+
 const oll = ipAddress + "." + personalId + "." + clickRate;
 
 if((oll == volumeResult)){
     isTestPass              = true;   
-    console.log(oll);
+   
 } else { isTestPass= false;}
 
 assertIsTrue(true, isTestPass, 'The "volume" file contains correct data');
