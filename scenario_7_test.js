@@ -16,7 +16,7 @@ const ipAddress = "192.168.1.1";
 
 const oll = ipAddress + "." + personalId + "." + clickRate;
 
-if((oll == volumeResult)){
+if(oll == volumeResult){
     isTestPass              = true;   
    
 } else { isTestPass= false;}
